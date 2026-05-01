@@ -1,0 +1,301 @@
+$footer-a-focus-color: #005fcc;
+$color-attribution: hsl(228, 45%, 44%);
+
+$navy-950: #0e1323;
+$navy-900: #1c204b;
+$navy-800: #33397a;
+$navy-200: #bbc0ff;
+
+$orange-300: #ff8b64;
+$purple-700: #7335d2;
+$purple-600: #5747ea;
+$purple-500: #7078c9;
+$blue-300: #55c2e6;
+$pink-400: #ff5e7d;
+$green-400: #4bcf82;
+$yellow-300: #f1c75b;
+
+$white: #ffffff;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 500;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+a {
+    color: $purple-500;
+    font-size: 1.125rem;
+    text-decoration: none;
+}
+
+.active,
+a:hover,
+a:focus {
+    color: $white;
+}
+
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+    background-color: $navy-950;
+    color: $white;
+}
+
+main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 5rem 1.5rem;
+}
+
+.dashboard {
+    width: min(100%, 1110px);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    article {
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    &__profile {
+        background-color: $navy-900;
+
+        &__info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 2rem;
+            border-radius: 15px;
+            background-color: $purple-600;
+
+            p {
+                color: $navy-200;
+                font-size: 0.95rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                font-weight: $font-weight-light;
+            }
+
+            &__avatar {
+                flex-shrink: 0;
+                width: 64px;
+                height: 64px;
+                border: 3px solid $white;
+                border-radius: 50%;
+                overflow: hidden;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &__time {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.5rem 2rem;
+        }
+    }
+
+    &__activities {
+        &__content {
+            position: relative;
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1.75rem 1.5rem;
+            background-color: $navy-900;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $navy-800;
+            }
+
+            &__menu {
+                justify-self: end;
+            }
+
+            &__title {
+                font-size: 1.125rem;
+                font-weight: $font-weight-bold;
+            }
+
+            &__time {
+                font-size: 2rem;
+                font-weight: $font-weight-light;
+            }
+
+            &__previous {
+                color: $navy-200;
+                font-size: 0.95rem;
+                justify-self: end;
+            }
+        }
+
+        &__work,
+        &__play,
+        &__study,
+        &__exercise,
+        &__social,
+        &__self-care {
+            background-color: transparent;
+        }
+
+        &__work__background,
+        &__play__background,
+        &__study__background,
+        &__exercise__background,
+        &__social__background,
+        &__self-care__background {
+            min-height: 2.4rem;
+            background-repeat: no-repeat;
+            background-position: right 1rem top -0.5rem;
+        }
+
+        &__work__background {
+            background-color: $orange-300;
+            background-image: url("../images/icon-work.svg");
+        }
+
+        &__play__background {
+            background-color: $blue-300;
+            background-image: url("../images/icon-play.svg");
+        }
+
+        &__study__background {
+            background-color: $pink-400;
+            background-image: url("../images/icon-study.svg");
+        }
+
+        &__exercise__background {
+            background-color: $green-400;
+            background-image: url("../images/icon-exercise.svg");
+        }
+
+        &__social__background {
+            background-color: $purple-700;
+            background-image: url("../images/icon-social.svg");
+        }
+
+        &__self-care__background {
+            background-color: $yellow-300;
+            background-image: url("../images/icon-self-care.svg");
+        }
+    }
+}
+
+footer {
+    padding: 1rem;
+    color: $white;
+
+    .attribution {
+        font-size: 0.75rem;
+        text-align: center;
+    }
+
+    .attribution a {
+        color: $color-attribution;
+    }
+
+    a:focus-visible {
+        outline: 3px solid $footer-a-focus-color;
+        outline-offset: 2px;
+    }
+}
+
+@media (min-width: 900px) {
+    main {
+        padding: 2rem;
+    }
+
+    .dashboard {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 2rem;
+
+        &__profile {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+
+            &__info {
+                height: 70%;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 2rem;
+
+                h1 {
+                    font-size: 2.5rem;
+                    line-height: 1.2;
+                }
+
+                &__avatar {
+                    width: 78px;
+                    height: 78px;
+                    margin-bottom: 2.5rem;
+                }
+            }
+
+            &__time {
+                height: 30%;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 1.25rem;
+                padding: 2rem;
+            }
+        }
+
+        &__activities {
+            &__content {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                align-items: start;
+                gap: 0.5rem;
+                min-height: 200px;
+                padding: 2rem;
+
+                &__time {
+                    margin-top: 1rem;
+                    font-size: 2.5rem;
+                    grid-column: 1 / 3;
+                }
+
+                &__previous {
+                    justify-self: unset;
+                    grid-column: 1 / 3;
+                }
+            }
+
+            &__work__background,
+            &__play__background,
+            &__study__background,
+            &__exercise__background,
+            &__social__background,
+            &__self-care__background {
+                min-height: 45px;
+            }
+        }
+    }
+}

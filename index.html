@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <main>
+      <section class="dashboard">
+        <article class="dashboard__profile">
+          <div class="dashboard__profile__info">
+            <div class="dashboard__profile__info__avatar">
+              <img
+                src="./images/image-jeremy.png"
+                alt="Jeremy Robson's avatar"
+              />
+            </div>
+            <p>Report for</p>
+            <h1>Jeremy Robson</h1>
+          </div>
+          <div class="dashboard__profile__time">
+            <a class="dashboard__profile__time__daily" href="#">Daily</a>
+            <a class="dashboard__profile__time__weekly active" href="#"
+              >Weekly</a
+            >
+            <a class="dashboard__profile__time__monthly" href="#">Monthly</a>
+          </div>
+        </article>
+        <article class="dashboard__activities__work">
+          <div class="dashboard__activities__work__background"></div>
+          <div class="dashboard__activities__content">
+            <h2 class="dashboard__activities__content__title">Work</h2>
+            <a class="dashboard__activities__content__menu" href="#">...</a>
+            <p class="dashboard__activities__content__time work-time">5hrs</p>
+            <p class="dashboard__activities__content__previous work-previous">
+              Previous - 7hrs
+            </p>
+          </div>
+        </article>
+        <article class="dashboard__activities__play">
+          <div class="dashboard__activities__play__background"></div>
+          <div class="dashboard__activities__content">
+            <h2 class="dashboard__activities__content__title">Play</h2>
+            <a class="dashboard__activities__content__menu" href="#">...</a>
+            <p class="dashboard__activities__content__time play-time">1hr</p>
+            <p class="dashboard__activities__content__previous play-previous">
+              Previous - 2hrs
+            </p>
+          </div>
+        </article>
+        <article class="dashboard__activities__study">
+          <div class="dashboard__activities__study__background"></div>
+          <div class="dashboard__activities__content">
+            <h2 class="dashboard__activities__content__title">Study</h2>
+            <a class="dashboard__activities__content__menu" href="#">...</a>
+            <p class="dashboard__activities__content__time study-time">0hrs</p>
+            <p class="dashboard__activities__content__previous study-previous">
+              Previous - 1hr
+            </p>
+          </div>
+        </article>
+        <article class="dashboard__activities__exercise">
+          <div class="dashboard__activities__exercise__background"></div>
+          <div class="dashboard__activities__content">
+            <h2 class="dashboard__activities__content__title">Exercise</h2>
+            <a class="dashboard__activities__content__menu" href="#">...</a>
+            <p class="dashboard__activities__content__time exercise-time">1hr</p>
+            <p class="dashboard__activities__content__previous exercise-previous">
+              Previous - 1hr
+            </p>
+          </div>
+        </article>
+        <article class="dashboard__activities__social">
+          <div class="dashboard__activities__social__background"></div>
+          <div class="dashboard__activities__content">
+            <h2 class="dashboard__activities__content__title">Social</h2>
+            <a class="dashboard__activities__content__menu" href="#">...</a>
+            <p class="dashboard__activities__content__time social-time">1hr</p>
+            <p class="dashboard__activities__content__previous social-previous">
+              Previous - 3hrs
+            </p>
+          </div>
+        </article>
+        <article class="dashboard__activities__self-care">
+          <div class="dashboard__activities__self-care__background"></div>
+          <div class="dashboard__activities__content">
+            <h2 class="dashboard__activities__content__title">Self Care</h2>
+            <a class="dashboard__activities__content__menu" href="#">...</a>
+            <p class="dashboard__activities__content__time self-care-time">0hrs</p>
+            <p class="dashboard__activities__content__previous self-care-previous">
+              Previous - 1hr
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Frontend Mentor</a
+        >. Coded by
+        <a
+          href="https://github.com/RemiPish"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Rémi P</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>
