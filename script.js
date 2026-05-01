@@ -207,4 +207,8 @@ fetch("./data.json")
       currentTimeframe = "weekly";
       updateTimeframe(data, currentTimeframe);
     });
+  }).catch((error) => {
+    console.error("Fetch error:", error);
+    document.body.innerHTML =
+      "<p style='color:white;text-align:center'>Failed to load data.</p>";
   });

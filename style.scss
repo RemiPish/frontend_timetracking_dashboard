@@ -33,15 +33,16 @@ p {
     margin: 0;
 }
 
-a {
+button {
+    all: unset;
     color: $purple-500;
     font-size: 1.125rem;
     text-decoration: none;
 }
 
 .active,
-a:hover,
-a:focus {
+button:hover,
+button:focus {
     color: $white;
 }
 

@@ -10,15 +10,16 @@ p {
   margin: 0;
 }
 
-a {
+button {
+  all: unset;
   color: #7078c9;
   font-size: 1.125rem;
   text-decoration: none;
 }
 
 .active,
-a:hover,
-a:focus {
+button:hover,
+button:focus {
   color: #ffffff;
 }
 
