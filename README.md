@@ -20,7 +20,7 @@ This is a solution to the [Time tracking dashboard](https://www.frontendmentor.i
 
 ### Links
 
- Live Site URL: [Vercel](https://frontend-newsletter-signup.vercel.app/)
+ Live Site URL: [Vercel](https://frontend-timetracking-dashboard.vercel.app/)
 
 ## My process
 
